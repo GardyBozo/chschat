@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"></script>
   </head>
         <body>
     
@@ -19,32 +21,29 @@
                 <div class="bigbox">
                 <div class="centered">
                 <br>
-                <input class="inputformat" type="text" id="yourCode" name="friendCode" placeholder= "Your Chat Id..."> 
+                <!--CREATING ID-->
+                <h2>chschat</h1>
+                <input class="textbox" type="text" id="yourCode" name="friendCode" placeholder= "Your Chat Id..."> 
                 <input class="inputformat" id="confirm" type="submit" value="Create Your Code"> 
                 <br>
                 <br>
-                <input class="inputformat" type="text" id="fid" name="friend" placeholder="Your friend's code...">
+                <!--FRIENDS CODE-->
+                <input class="textbox" type="text" id="fid" name="friend" placeholder="Your friend's code...">
                 <input class="inputformat" id="connectSub" type="submit" value="Connect to Friend"> 
                 <br>
                 <br>
-                <p1>Your code is:<p1> <input type="text" id="display" readonly>
-                <br>
-                <br>
-                <p1>Connected to:<p1> 
-                <input type="text" id="display2" autofocus readonly>
-                <br>
-                <br>
+                <!--OVERALL OUTPUT-->
                 <textarea class="chatbox" id="chatlog" rows="4" cols="50" readonly> </textarea>
                 <br>
                 <br>
-                <p1 for="lname">Send Message: </p1>
-                <input type="text" id="message" onkeypress="chat(event)" placeholder="Send a Message...">
-                <input type="button" id="VCbutton" value="VC">
+                <input class="textbox" type="text" id="message" onkeypress="chat(event)" placeholder="Send a Message...">
+                <input class="inputformat" type="button" id="VCbutton" value="Voice Chat">
                 <br>
                 <audio id = "audio1" autoplay></audio>
                 </div>        
                 </div>
-        <div class="intro">
+                <!--Splash Page-->
+                <div class="intro">
                 <h1 class="logo-header">
                         <span class="logo">chs</span><span class="logo">chat</span>
                 </h1>

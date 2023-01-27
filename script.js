@@ -3,39 +3,32 @@ let intro = document.querySelector('.intro');
 let logo = document.querySelector('.logo-header');
 let logoSpan = document.querySelectorAll('.logo');
 
-window.addEventListener('DOMContentLoaded', ()=>{
-    //text and background code
-    logoSpan.forEach((span, idx)=>{
-      setTimeout(()=>{
-        span.classList.add('active');
-      }, (idx+1)*400)
-    });
-      
-    setTimeout(()=>{
-        logoSpan.forEach((span, idx)=>{
-          
-          setTimeout(()=>{
-            span.classList.remove('active');
-            span.classList.add('fade');
-          },(idx+1)*50)
-        })
-      },2000);
-      
-      setTimeout(()=>{
-        intro.style.top = '-100vh';
-      }, 2300)
-})
+window.addEventListener('DOMContentLoaded', () => {
+  //text and background code
+  logoSpan.forEach((span, idx) => {
+    setTimeout(() => {
+      span.classList.add('active');
+    }, (idx + 1) * 400);
+  });
 
-  
-  
+  setTimeout(() => {
+    logoSpan.forEach((span, idx) => {
+      setTimeout(() => {
+        span.classList.remove('active');
+        span.classList.add('fade');
+      }, (idx + 1) * 50);
+    });
+  }, 2000);
+
+  setTimeout(() => {
+    intro.style.top = '-100vh';
+  }, 2300);
+});
+
   //Local Vars
-  src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-  src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"
   var localuser = null
   var confirm = document.getElementById("confirm");
-  var display = document.getElementById("display");
   var input = document.getElementById("yourCode");
-  var display2 = document.getElementById("display2");
   var chatlog = document.getElementById("chatlog");
   var sendbox = document.getElementById("message");
   var vcbutton = document.getElementById("VCbutton");
@@ -72,11 +65,9 @@ window.addEventListener('DOMContentLoaded', ()=>{
     if(localuser == null && input.value != ""){
     localuser = new Peer(input.value);
     window.alert("Your user id is: " + localuser.id)
-    display.value = localuser.id
     // connection listener
     localuser.on('connection', function(conn){
     connection = conn //sets connection equal to temp variable
-    display2.value = connection.peer // updates display2
     connection.on('open', function(){
     window.alert("Connected!") //logs a received connection
     connection.on('data',function(data){ 
@@ -118,7 +109,6 @@ window.addEventListener('DOMContentLoaded', ()=>{
             });
         connection.send("Connection Made! " + localuser.id + " says hi!")
         chatlog.value += "Connection Made! " + localuser.id + " says hi!" + "\n"
-        display2.value = connection.peer
       });
     }
       else if(connection != null){
@@ -153,11 +143,3 @@ window.addEventListener('DOMContentLoaded', ()=>{
     
   }
   
-
- 
-function bgC() {
-   var element = document.body;
-   element.classList.toggle("dark-mode");
-}
-
-
