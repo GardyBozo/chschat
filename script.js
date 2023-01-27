@@ -48,7 +48,7 @@ window.addEventListener('DOMContentLoaded', () => {
     navigator.mediaDevices.getUserMedia({video: false, audio: true}).then((stream) => {
         window.localStream = stream; // A
         vcstream = stream;
-        window.alert("mediastream loaded")
+        //window.alert("mediastrem loaded")
     }).catch((err) => {
         window.alert(`you got an error: ${err}`)
     });
@@ -69,7 +69,7 @@ window.addEventListener('DOMContentLoaded', () => {
     localuser.on('connection', function(conn){
     connection = conn //sets connection equal to temp variable
     connection.on('open', function(){
-    window.alert("Connected!") //logs a received connection
+    //window.alert("Connected!") //logs a received connection
     connection.on('data',function(data){ 
     chatlog.value += connection.peer + ": " + data + "\n"
     });
@@ -120,8 +120,8 @@ window.addEventListener('DOMContentLoaded', () => {
   }
   
   // chat------------------------------ damian please fix this, it works on every key press instead enter
-  function chat(event){
-    if(event == null || event.keyCode == 13){
+  /*function chat(event){
+    if(event == null || event.which == 13){
         if(localuser != null && connection != null){
         connection.send(sendbox.value)
         chatlog.value += localuser.id + ": " + sendbox.value + "\n"
@@ -129,14 +129,25 @@ window.addEventListener('DOMContentLoaded', () => {
         chatlog.scrollTop = chatlog.scrollHeight
       }
     }
-   }    
+   } */
+   
+   $(document).on("keypress", "input", function(event){
+    if(event.which == 13){
+        if(localuser != null && connection != null && sendbox.value != ""){
+          connection.send(sendbox.value)
+          chatlog.value += localuser.id + ": " + sendbox.value + "\n"
+          sendbox.value = ""
+          chatlog.scrollTop = chatlog.scrollHeight
+        }
+    }
+  });
   
   vcbutton.onclick = function(){
     if(localuser != null && connection != null){
     const call = localuser.call(connection.peer, vcstream);
-      alert("call sent")
+      alert("Call sent!")
      call.on('stream',(stream) => {
-             alert("!!! SENDER !!! stream created, creating audio element")
+             alert("Voice channel open!")
             remoteAudio.srcObject = stream;
      });  
     }
