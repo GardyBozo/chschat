@@ -62,11 +62,8 @@ h2 {
   top: 0;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(
-    to bottom right,
-    #80198a,
-    rgba(201, 180, 59, 0.873)
-  );
+  /*background: linear-gradient(to bottom right,#80198a,rgba(201, 180, 59, 0.873));*/
+  background: linear-gradient(to bottom right,#3a1c71, #d76d77, #ffaf7b);
   transition: 1.5s;
 }
 
