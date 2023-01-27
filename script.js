@@ -80,7 +80,7 @@ window.addEventListener('DOMContentLoaded', () => {
  
         thecall.answer(vcstream);
     thecall.on('stream',function(stream){
-      window.alert("!!!RECEIVER!!! stream created, received audio element")
+      window.alert("Voice channel received!")
             remoteAudio.srcObject = stream;
     });
     });
