@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bozo</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+        <body>
+    
+                                                    <!-- ChatApp v0.55 -->
+                                 <!-- Created by Casey LeBlanc, Damian Guy, and Gardy Hoffman -->
+                                                <!-- Last Edited 9-07-22 -->
+        
+        
+        <!--Actually important stuff i guess-->
+                <div class="bg"></div>
+                <div class="bigbox">
+                <div class="centered">
+                <br>
+                <input class="inputformat" type="text" id="yourCode" name="friendCode" placeholder= "Your Chat Id..."> 
+                <input class="inputformat" id="confirm" type="submit" value="Create Your Code"> 
+                <br>
+                <br>
+                <input class="inputformat" type="text" id="fid" name="friend" placeholder="Your friend's code...">
+                <input class="inputformat" id="connectSub" type="submit" value="Connect to Friend"> 
+                <br>
+                <br>
+                <p1>Your code is:<p1> <input type="text" id="display" readonly>
+                <br>
+                <br>
+                <p1>Connected to:<p1> 
+                <input type="text" id="display2" autofocus readonly>
+                <br>
+                <br>
+                <textarea class="chatbox" id="chatlog" rows="4" cols="50" readonly> </textarea>
+                <br>
+                <br>
+                <p1 for="lname">Send Message: </p1>
+                <input type="text" id="message" onkeypress="chat(event)" placeholder="Send a Message...">
+                <input type="button" id="VCbutton" value="VC">
+                <br>
+                <audio id = "audio1" autoplay></audio>
+                </div>        
+                </div>
+        <div class="intro">
+                <h1 class="logo-header">
+                        <span class="logo">chs</span><span class="logo">chat</span>
+                </h1>
+        </div>
+        </body>
+</html>
