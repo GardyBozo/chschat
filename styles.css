@@ -1,3 +1,11 @@
+/*HTML FORMATTING===============================================================*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 p1 {
   color: white;
   font-size: 15px;
@@ -15,7 +23,7 @@ aside {
   margin-left: 15px;
   float: right;
   font-family: "Arial";
-  background-color: #16161e;
+  background: #16161e;
   color: #565f89;
   text-align: center;
   border-radius: 25px;
@@ -39,10 +47,6 @@ footer{
   text-decoration: underline;
 }
 
-.themebutton {
-  margin-bottom: 10px; 
-  width: 100px;
-}
 
 h2 {
   color:#b1bae6;
@@ -53,53 +57,7 @@ h2 {
   padding-bottom: 20px;
 }
 
-.bigbox {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.inputformat {
-  padding: 5px;
-  color: #b1bae6;
-  background-color: #24263171 ;
-  border-radius: 10px;
-  border: 3px solid transparent;
-}
-
-.textbox {
-  padding: 5px;
-  color: black;
-  background-color: #2b2c33;
-  border-radius: 10px;
-  border: 3px solid transparent;
-}
-.centered {
-  border-radius: 25px;
-  padding: 10px;
-  width: 800px;
-  height: 600px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #1a1b26;
-  ;
-  border: 10px solid transparent;
-  align-items: center;
-  
-}
-.chatbox {
-  resize: none;
-  width: 460px;
-  height: 250px;
-  background-color: #2b2c33;
-  color: #b1bae6;
-  border-radius: 10px;
-  border: 3px solid transparent;
-  padding: 10px;
-  font-family: "Arial",'sans';
-}
+/*BULK FORMATTING===============================================================*/
 
 .bg {
   position: fixed;
@@ -110,8 +68,69 @@ h2 {
   height: 100vh;
   /*background: linear-gradient(to bottom right,#80198a,rgba(201, 180, 59, 0.873));
   background: linear-gradient(to bottom right,#3a1c71, #d76d77, #ffaf7b);*/
-  background: conic-gradient(#3a1c71, #d76d77,#ffaf7b,#73eea6, #398cda, #3a1c71);
+  background: #1a1b26;
   transition: 1.5s;
+}
+
+.bigbox {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.centered {
+  border-radius: 25px;
+  padding: 10px;
+  width: 800px;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #1a1b26;
+  border: 10px solid transparent;
+  align-items: center;
+  transition: 1.5;
+}
+
+/*INPUT FORMATTING===============================================================*/
+
+.inputformat {
+  padding: 5px;
+  color: #b1bae6;
+  background-color: #24263171;
+  border-radius: 10px;
+  border: 3px solid transparent;
+}
+
+.themebutton {
+  margin-bottom: 10px; 
+  width: 100px;
+}
+
+.themetextbox {
+  width: 100px;
+  text-align: center;
+}
+
+.textbox {
+  padding: 5px;
+  color: black;
+  background-color: #2b2c33;
+  border-radius: 10px;
+  border: 3px solid transparent;
+}
+
+.chatbox {
+  resize: none;
+  width: 460px;
+  height: 250px;
+  background-color: #24263171;
+  color: #b1bae6;
+  border-radius: 10px;
+  border: 3px solid transparent;
+  padding: 10px;
+  font-family: "Arial",'sans';
 }
 
 input[type='text'],
@@ -131,16 +150,9 @@ textarea {
   left: 150px;
   margin-top: 100px;
 }
-.vid {
-  position: relative;
-  padding: 10px 10px;
-}
-/*splash page*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
+/*SPLAH PAGE FORMATTING===============================================================*/
+
 
 .intro {
   position: fixed;

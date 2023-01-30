@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>chschat---created by CDG</title>
+    <title>CDG: chschat</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
@@ -13,19 +13,19 @@
     
                                                     <!-- ChatApp v0.55 -->
                                  <!-- Created by Casey LeBlanc, Damian Guy, and Gardy Hoffman -->
-                                                <!-- Last Edited 9-07-22 -->
+                                                <!-- Last Edited 1-30-23 -->
         
-        
-        <!--Actually important stuff i guess-->
+                <!--BACKGROUND AND CENTER BOX SETUP-->
                 <div class="bg" id="bg"></div>
                 <div class="bigbox">
-                <div class="centered">
+                <div class="centered" id="centerbox">
                 <br>
                 <!--CREATING ID-->
                 <h2>chschat</h1>
                 <input class="textbox" type="text" id="yourCode" name="friendCode" placeholder= "Your Chat Id..."> 
                 <input class="inputformat" id="confirm" type="button" value="Create Your Code">
-                <aside>
+                <aside id="themebox">
+                <!--THEMES SETUP-->
                 <h3>Themes</h3>
                 <br>
                 <h4>Solid Colors</h4>
@@ -37,10 +37,13 @@
                 <input class="inputformat themebutton" type="button" id="rainbow" value="Rainbow">
                 <br>
                 <input class="inputformat themebutton" type="button" id="relay" value="Relay">
+                <br>
+                <h4>Custom Color</h4>
+                <input class="textbox themetextbox" type="text" id="hexcodeinput" placeholder="Hex Code">
                 </aside>
                 <br>
                 <br>
-                <!--FRIENDS CODE-->
+                <!--FRIENDS SETUP-->
                 <input class="textbox" type="text" id="fid" name="friend" placeholder="Your friend's code...">
                 <input class="inputformat" id="connectSub" type="button" value="Connect to Friend"> 
                 <br>
@@ -58,7 +61,7 @@
                 <footer class="">Created by CDG</footer>
                 </div>        
                 </div>
-                <!--Splash Page-->
+                <!--SPLASH PAGE-->
                 <div class="intro">
                 <h1 class="logo-header">
                         <span class="logo">chs</span><span class="logo">chat</span>

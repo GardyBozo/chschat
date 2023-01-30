@@ -158,21 +158,35 @@ window.addEventListener('DOMContentLoaded', () => {
   var light = document.getElementById("light");
   var rainbow = document.getElementById("rainbow");
   var relay = document.getElementById("relay");
+  var custom = document.getElementById("hexcodeinput")
   var bg = document.getElementById("bg");
+  var centered = document.getElementById("centerbox")
+  var themebox = document.getElementById("themebox")
 
 
   dark.onclick = function(){
     bg.style.background = "#1a1b26";
+    custom.value = "";
   }
 
   light.onclick = function(){
-    bg.style.background = "#DADADA";
+    bg.style.background = "#D1D1D1";
+    custom.value = "";
   }
 
   rainbow.onclick = function(){
     bg.style.background = "conic-gradient(#3a1c71, #d76d77,#ffaf7b,#73eea6, #398cda, #3a1c71)";
+    custom.value = "";
   }
 
   relay.onclick = function(){
     bg.style.background = "linear-gradient(to bottom right,#3a1c71, #d76d77, #ffaf7b)";
+    custom.value = "";
   }
+
+  custom.addEventListener("keyup", function(){
+    if(custom.value.startsWith("#") && custom.value.length==7){
+      bg.style.background = custom.value;
+    }
+  })
+
