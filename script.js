@@ -153,4 +153,26 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     
   }
-  
+  //----------------------------------THEME CHANGER----------------------------------
+  var dark = document.getElementById("dark");
+  var light = document.getElementById("light");
+  var rainbow = document.getElementById("rainbow");
+  var relay = document.getElementById("relay");
+  var bg = document.getElementById("bg");
+
+
+  dark.onclick = function(){
+    bg.style.background = "#1a1b26";
+  }
+
+  light.onclick = function(){
+    bg.style.background = "#DADADA";
+  }
+
+  rainbow.onclick = function(){
+    bg.style.background = "conic-gradient(#3a1c71, #d76d77,#ffaf7b,#73eea6, #398cda, #3a1c71)";
+  }
+
+  relay.onclick = function(){
+    bg.style.background = "linear-gradient(to bottom right,#3a1c71, #d76d77, #ffaf7b)";
+  }
