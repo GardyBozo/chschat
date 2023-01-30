@@ -4,6 +4,14 @@ p1 {
   font-family: 'Arial', 'sans';
 }
 
+footer{
+  color: white;
+  font-size: 15px;
+  font-family: 'Arial', 'sans';
+  text-align: center;
+  text-decoration: underline;
+}
+
 h2 {
   color: white;
   font-size: 30px;
@@ -18,17 +26,20 @@ h2 {
   padding: 0;
   box-sizing: border-box;
 }
+
 .inputformat {
   padding: 5px;
   color: #fff;
-  background-color: rgb(39, 39, 39);
+  background-color: #2b2c33;
   border-radius: 10px;
   border: 3px solid transparent;
+  
 }
+
 .textbox {
   padding: 5px;
   color: black;
-  background-color: rgb(39, 39, 39);
+  background-color: #2b2c33;
   border-radius: 10px;
   border: 3px solid transparent;
 }
@@ -54,7 +65,10 @@ h2 {
   color: white;
   border-radius: 10px;
   border: 3px solid transparent;
+  padding: 10px;
+  font-family: "Arial",'sans';
 }
+
 .bg {
   position: fixed;
   z-index: -1;
@@ -64,6 +78,7 @@ h2 {
   height: 100vh;
   /*background: linear-gradient(to bottom right,#80198a,rgba(201, 180, 59, 0.873));*/
   background: linear-gradient(to bottom right,#3a1c71, #d76d77, #ffaf7b);
+  /*background-image: conic-gradient(#3a1c71, #d76d77,#ffaf7b,#73eea6, #398cda, #3a1c71);*/
   transition: 1.5s;
 }
 
@@ -72,10 +87,6 @@ textarea {
   background-color: #d1d1d1;
 }
 
-.dark-mode {
-  background-color: #393b43;
-  color: white;
-}
 .input[type='submit'] {
   width: 50%;
   background-color: #4caf50;
