@@ -18,11 +18,11 @@ window.addEventListener('DOMContentLoaded', () => {
         span.classList.add('fade');
       }, (idx + 1) * 50);
     });
-  }, 2000);
+  }, 2500);
 
   setTimeout(() => {
     intro.style.top = '-100vh';
-  }, 2300);
+  }, 3000);
 });
 
   //Local Vars
